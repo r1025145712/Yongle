@@ -1,9 +1,9 @@
 import React from 'react'
-
+import {PageContainer} from 'common/styled'
 class Mine extends React.Component{
     render(){
         return(
-            <div>我的</div>
+            <PageContainer>我的</PageContainer>
         )
     }
 }

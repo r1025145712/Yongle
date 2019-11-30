@@ -19,6 +19,7 @@ module.exports = override(
         "static":path.join(__dirname,"./src/static"),
         "store":path.join(__dirname,"./src/store"),
         "utils":path.join(__dirname,"./src/utils"),
+        "img":path.join(__dirname,"./public/img"),
    }),
    addDecoratorsLegacy()
  );

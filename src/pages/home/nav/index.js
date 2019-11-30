@@ -1,9 +1,10 @@
 import React from 'react'
-import '../index.css'
+// import '../index.css'
+import {NavContainer} from './styled'
 class Hnav extends React.Component {
     render() {
         return (
-            <div>
+            <NavContainer>
                 <div className="title-nav">
                     <p>
                         <a href="/category/yanchanghui/" ><i></i>演唱会</a>
@@ -17,10 +18,11 @@ class Hnav extends React.Component {
                          <a href="/person/index.html"><i></i>我的</a></p>
                 </div>
                 <div className="first-pay-first">
-                    <a><img src="http://static.228.cn/upload/2019/11/09/1573281352951_y4i5_m1.jpg" />
+                    <a href="true">
+                        <img src="http://static.228.cn/upload/2019/11/09/1573281352951_y4i5_m1.jpg" alt="" />
                     </a>
                 </div>
-            </div>
+            </NavContainer>
         )
     }
 }

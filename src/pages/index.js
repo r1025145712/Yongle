@@ -6,8 +6,8 @@ export const Home = Loadable({
     loading:Loading
 })
 
-export const Classify = Loadable({
-    loader:()=>import("./classify"),
+export const Category = Loadable({
+    loader:()=>import("./category"),
     loading:Loading
 })
 

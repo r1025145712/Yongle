@@ -1,4 +1,4 @@
-import {Home,Classify,Mine,Search,Login} from '../pages'
+import {Home,Category,Mine,Search,Login} from '../pages'
 
 export const TabBarRoute=[
     {
@@ -11,8 +11,8 @@ export const TabBarRoute=[
         icon:"#iconzhuye",
     },
     {
-        path:"/classify",
-        component:Classify,
+        path:"/category",
+        component:Category,
         meta:{
             flag:true
         },

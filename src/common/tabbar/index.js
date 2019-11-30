@@ -3,6 +3,7 @@ import { TabBarRoute } from "../../router"
 import {withRouter} from "react-router-dom";
 
 import {TabBarContainer} from './styled'
+@withRouter
 class TabBar extends Component {
     render() {
         let {path} = this.props;
@@ -20,4 +21,4 @@ class TabBar extends Component {
     }
 }
 
-export default withRouter(TabBar);
+export default TabBar;

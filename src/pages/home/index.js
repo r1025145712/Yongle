@@ -1,12 +1,13 @@
 import React from 'react'
-import './index.css'
+// import './index.css'
 import Head from './head'
 import Hnav from './nav'
 import Main from './main'
+import {PageContainer} from './styled'
 class Home extends React.Component {
     render() {
         return (
-            <div className="page">
+            <PageContainer>
                 <section className="container">
                     <div className="content">
                        <Head/>
@@ -14,7 +15,7 @@ class Home extends React.Component {
                        <Main/>
                     </div>
                 </section>
-            </div>
+            </PageContainer>
         )
     }
 }
