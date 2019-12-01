@@ -18,8 +18,6 @@ class Center extends React.Component {
                         <a href="true" data-id="627991136" className="goods-con">
                             <div className="left">
                                 <img alt="" src="http://static.228.cn/upload/2019/10/24/AfterTreatment/1571908696509_q3e5-0.jpg!t120x160.jpg"></img>
-                                      {/* onError="this.src=&quot;//static.228.cn/resources/images/lazy_default.gif&quot;"
-                                    alt="林奕匡Philromantics 2019巡回演唱会-澳门站" */}
                                 <i className="gradual-gray tip  tip-grabSeat ">售完</i>
                             </div>
                             <div className="right">
@@ -91,6 +89,9 @@ class Center extends React.Component {
                 </div>
             </div>
         );
+    }
+    componentDidMount(){
+
     }
 }
 
