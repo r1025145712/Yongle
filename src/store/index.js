@@ -5,13 +5,13 @@ import reduxThunk from "redux-thunk";
 import {composeWithDevTools} from "redux-devtools-extension"
 
 
-import sosuo from "./reducers/sosuo"
-import searchApi from "./reducers/searchApi"
+import classification from "./reducers/classification"
+import classificationApi from "./reducers/classificationApi"
 
 const reducers = combineReducers({
 
-    sosuo,
-    searchApi
+    classification,
+    classificationApi
 })
 
 
