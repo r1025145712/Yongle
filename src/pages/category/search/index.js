@@ -7,15 +7,12 @@ class Search extends React.Component {
         this.state={
             list:[
                 {
-                    id:0,
                     name:"全部地点"
                 },
                 {
-                    id:1,
                     name:"全部分类"
                 },
                 {
-                    id:2,
                     name:"全部时间"
                 },
             ]
@@ -27,17 +24,9 @@ class Search extends React.Component {
                 <div className="classify-type ">
                     {/* fixedActiveNav  */}
                     <ul>
-                        {this.state.list.map((item)=>(
-                            // className={path===item.path?'active':""} onClick={this.handleClick.bind(this,item.path)}
-                            <li  key={item.id}><i></i>{item.name}</li>
+                        {this.state.list.map((item,index)=>(
+                            <li  key={index}><i></i>{item.name}</li>
                         ))}
-{/*                         
-                        <li className=""><i></i>全部分类</li>
-                        <li className=""><i></i>全部时间</li> */}
-                    
-                        {/* <li className={index===this.state.currentState?"active":null}><i></i>全部地点</li>
-                        <li className={index===this.state.currentState?"active":null}><i></i>全部分类</li>
-                        <li className={index===this.state.currentState?"active":null}><i></i>全部时间</li> */}
                     </ul>
                     {/* <div class="time-tab">  */}
                     {/* 时间 */}

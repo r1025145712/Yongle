@@ -4,11 +4,14 @@ import reduxThunk from "redux-thunk";
 
 import {composeWithDevTools} from "redux-devtools-extension"
 
-import category from "./reducers/category";
 
+import sosuo from "./reducers/sosuo"
+import searchApi from "./reducers/searchApi"
 
 const reducers = combineReducers({
-    category
+
+    sosuo,
+    searchApi
 })
 
 

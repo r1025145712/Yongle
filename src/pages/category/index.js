@@ -1,20 +1,21 @@
 import React from 'react'
-// import './index.css'
 import {PageContainer} from './styled'
 import Head from './head/index'
-import Search from './search/index'
-// import Center from './center/index'
-import Weekchoice from 'components/weekchoice'
+import Search from 'components/seach'
+import Weekchoice from 'components/main'
+import {HashRouter} from "react-router-dom"
 
 class Classify extends React.Component {
     render() {
         return (
+            <HashRouter>
                 <PageContainer className="pb50">
                     <Head />
                     <Search />
                     {/* <Center /> */}
                     <Weekchoice />
                 </PageContainer>
+            </HashRouter>
         )
     }
 }
