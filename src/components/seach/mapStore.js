@@ -5,8 +5,8 @@ import {searchAsyncAction,addAsyncAction} from "../../action/category/actionCrea
 
 
 export const mapStateToProps =(state)=>({
-    city:state.sosuo.city,
-    leibie:state.sosuo.leibie
+    city:state.classification.city,
+    leibie:state.classification.leibie
 })
 
 

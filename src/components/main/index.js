@@ -14,7 +14,7 @@ class Weekchoice extends Component {
     render() {
 
         let { classify } = this.props;
-        console.log(classify)
+        // console.log(classify)
         let times=classify
         let action
         if (times===undefined) {
@@ -41,7 +41,7 @@ class Weekchoice extends Component {
                         <span className="gray9 db">换个分类试试</span>
                     </div>
 
-                    <div>
+                    <div className="main">
                         
                         {
                             (classify || []).map((item, index) => (

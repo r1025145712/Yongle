@@ -4,7 +4,7 @@ html{
 	width: 100%;
 	font-size:31.25vw;
 }
-body { color:#333;height: 100%; font:16px "SimSun","宋体","Arial Narrow",HELVETICA;     background: #f7f7f7;}
+body { color:#333;height: 100%; font:16px "SimSun","宋体","Arial Narrow",HELVETICA;   background: #fff;}
 *{
 	margin:0;
 	padding:0;

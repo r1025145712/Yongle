@@ -5,9 +5,11 @@ import Hnav from './nav'
 import Main from './main'
 import {PageContainer} from './styled'
 class Home extends React.Component {
+    
     render() {
-        return (
+        return ( 
             <PageContainer>
+              
                 <section className="container">
                     <div className="content">
                        <Head/>

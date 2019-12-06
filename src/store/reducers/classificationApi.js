@@ -13,7 +13,7 @@ export default handleActions({
     [fanhuiAsyncType]:(state,actions)=>{
         let fanhuiState = JSON.parse(JSON.stringify(state));
         fanhuiState.classify = actions.payload.data.data.pagerMemoryList
-        console.log(fanhuiState.classify)
+        // console.log(fanhuiState.classify)
         return fanhuiState
     },
     [LoadAsyncType]:(state,actions)=>{

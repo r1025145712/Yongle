@@ -1,35 +1,63 @@
 import React from 'react'
 import { Carousel, WingBlank } from 'antd-mobile';
 import { Home } from './styled'
+import { connect } from "react-redux"
+import { withRouter } from 'react-router-dom';
+import { mapStateToProps, mapDispatchToProps } from "./mapStore"
+@withRouter
+@connect(mapStateToProps, mapDispatchToProps)
 class Head extends React.Component {
-    constructor() {
+    constructor(props) {
         super()
+        const { location } = props;
+        let item;
+
+        if (location.state) {//判断当前有参数
+            item = location.state;
+            sessionStorage.setItem('lunbo', JSON.stringify(item));// 存入到sessionStorage中
+        } else {
+            item = JSON.parse(sessionStorage.getItem('lunbo'));// 当state没有参数时，取sessionStorage中的参数
+        }
         this.state = {
-            data: ['1', '2', '3'],
+            data: [{IMG:"/upload/2019/11/29/1575020411766_q7l9.jpg"}, {IMG:"/upload/2019/10/02/1569998757961_c5d0.jpg"}, {IMG:"/upload/2019/11/07/1573115736897_m0o6.jpg"}],
             imgHeight: '1.3rem',
         }
     }
 
     componentDidMount() {
-        // simulate img loading
-        setTimeout(() => {
-            this.setState({
-                data: ['http://static.228.cn/upload/2019/11/20/1574228699539_s7d5.jpg', 
-                'http://static.228.cn/upload/2019/11/08/1573194563381_z9k0.jpg', 
-                'http://static.228.cn/upload/2019/09/30/1569822822372_c3o3.jpg',
-                'http://static.228.cn/upload/2019/09/24/1569319547203_i3v9.jpg'
-            ],
-            });
-        }, 100);
+        this.props.history.listen(() => {
+            sessionStorage.removeItem("lunbo");
+        })
+        if (sessionStorage.getItem('lunbo')) {
+            let item = JSON.parse(sessionStorage.getItem('lunbo'));
+            
+            this.props.handleAsyncGetCity(item.item);
+         
+            console.log(item.item)
+          
+        }
+       
     }
     render() {
+        let name = (sessionStorage.getItem('lunbo') ? JSON.parse(sessionStorage.getItem('lunbo')).name : "全国")
+        let { poster } = this.props;
+        if(sessionStorage.getItem('lunbo')){
+            setTimeout(() => {
+                this.setState({
+                    data: poster
+                });
+            }, 100)
+        }
+      
         return (
             <Home>
                 <div className="home-head">
-                    <a href="/selCity.html" className="city">
-                        <span>全国</span> <i></i>
-                    </a>
-                    <div className="search">
+                    {
+                        <a href="#/city" className="city">
+                            <span>{name}</span> <i></i>
+                        </a>
+                    }
+                    <div className="search" onClick={this.handleSearch.bind(this)}>
                         <input type="text" placeholder="搜索" /> <i></i>
                     </div>
                 </div>
@@ -39,17 +67,15 @@ class Head extends React.Component {
                             autoplay={true}
                             infinite
                             dots={false}
-                            // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                            // afterChange={index => console.log('slide to', index)}
                         >
-                            {this.state.data.map(val => (
+                            {this.state.data.map((val,index) => (
                                 <a
-                                    key={val}
+                                    key={index}
                                     href="http://www.alipay.com"
                                     style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
                                 >
                                     <img
-                                        src={val}
+                                        src={'//static.228.cn/' + val.IMG}
                                         alt=""
                                         style={{ width: '100%', verticalAlign: 'top' }}
                                         onLoad={() => {
@@ -66,6 +92,10 @@ class Head extends React.Component {
             </Home>
         )
     }
+    handleSearch(){
+        this.props.history.push("/search")
+    }
+
 }
 
 export default Head;

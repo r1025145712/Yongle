@@ -29,3 +29,17 @@ export const Search = Loadable({
     loading:Loading
 })
 
+export const Opera = Loadable({
+    loader:()=>import("./opera"),
+    loading:Loading
+})
+
+export const Register = Loadable({
+    loader:()=>import("./register"),
+    loading:Loading
+})
+
+export const Admin = Loadable({
+    loader:()=>import("./admin"),
+    loading:Loading
+})

@@ -81,6 +81,5 @@ export const Home = styled.div`
 .wh_content{
     width: 3.2rem;
     height: 1.3rem;
-    background: #ccc;
 }
 `

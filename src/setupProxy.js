@@ -7,4 +7,18 @@ module.exports  = (app)=>{
             "^/ajax":""
         }
     }))
+    app.use("/node",proxy({
+        target:"http://39.105.204.151:3000",
+        changeOrigin:true,
+        pathRewrite:{
+            "^/node":""
+        }
+    }))
+    app.use("/local",proxy({
+        target:"http://localhost:3600",
+        changeOrigin:true,
+        pathRewrite:{
+            "^/local":""
+        }
+    }))
 }

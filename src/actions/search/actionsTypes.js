@@ -1,0 +1,5 @@
+export const  valAsyncType ="VALTYPE"
+export const cityvalType="CITYVAL"
+export const valType="VALTYPE"
+export const dayType="DAYTYPE"
+export const shuju="SHUJU"

@@ -92,13 +92,15 @@ export const MainContainer = styled.div`
 
 /* 场馆 */
 .venue {
-    width: calc(100% - .4rem);
-    margin: 0 .2rem;
+    width:3.2rem;
+    padding:0 .2rem
+
 }
 .venue li {
     float: left;
-    width: 48%;
+    width: 46%;
     margin-right: 2%;
+    margin-left:1%;
     position: relative;
     overflow: hidden;
     margin-bottom: .12rem;
@@ -114,6 +116,7 @@ export const MainContainer = styled.div`
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    white-space: nowrap;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     color: #333;

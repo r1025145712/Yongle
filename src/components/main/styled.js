@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const Center = styled.div`
 
 height: 100%;
+
 .search-noResult{
     width: 100%;
     height: 100%;
@@ -41,6 +42,10 @@ height: 100%;
     padding: .2rem;
     background: #fff;
     /* display: none; */
+}
+
+.main{
+    padding-bottom:.5rem
 }
 
 .goods-con {

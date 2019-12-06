@@ -16,6 +16,6 @@ export const searchApi=(fanhui)=>http.get({
     url:"/ajax/server/category/"+fanhui+".json",
 })
 
-export const Refresh=(load)=>http.get({
+export const Refresh=()=>http.get({
     url:"/ajax/server/category/default.json",
 })
